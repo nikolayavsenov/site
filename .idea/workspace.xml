@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02aa6e33-cc6e-4414-b2ac-61e1aef09eea" name="Default Changelist" comment="" />
+    <list default="true" id="02aa6e33-cc6e-4414-b2ac-61e1aef09eea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/blog/sport_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/somesite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +59,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1Y1WnHvTm3RItTBIyK9EUpquAdL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -132,22 +143,30 @@
       <workItem from="1582126572970" duration="11933000" />
       <workItem from="1582196989945" duration="10114000" />
       <workItem from="1582207440682" duration="8719000" />
-      <workItem from="1582236662635" duration="4230000" />
+      <workItem from="1582236662635" duration="4977000" />
+      <workItem from="1582283843878" duration="12073000" />
+      <workItem from="1582317740214" duration="68000" />
+      <workItem from="1582424946710" duration="179000" />
+      <workItem from="1582425647213" duration="1823000" />
+      <workItem from="1582434400615" duration="205000" />
+      <workItem from="1582489384008" duration="443000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/models.py</url>
-          <line>89</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

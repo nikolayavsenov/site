@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from .models import *
 from django.template import loader
 from django.views.generic.base import View
+from django.template.loader import *
 
 """def home(request):
     if request.method== "POST":
@@ -24,10 +25,15 @@ class PostDetailView(View):
     def get(self, request, category, slug):
         Cat_list = Cat.objects.all()  # передаёт параметры для рендера страницы, словарь или список
         post = Post.objects.get(slug=slug) # выводим только тот, который нам передала страница в slug
-        return render(request, 'blog/post_detail.html', {'categories': Cat_list, 'post': post})
+        """можно обратиться к названию поля в таблице, post_id"""
+        #comments = Comment.objects.filter(post_id=post)#(post=post)
+        return render(request, 'blog/post_detail.html', {
+            'categories': Cat_list, 'post': post# 'comments': comments
+        })
 
 class CatView(View):
     def get(self,request, category_name):
         category = Cat.objects.get(slug=category_name) #выводим только выбранные категории
-        return render(request, 'blog/post_list.html', {'category': category})
+        #Почему шаблон передаётся через category???
+        return render(request, category.template, {'category': category})
 

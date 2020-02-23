@@ -23,7 +23,7 @@ class Cat(MPTTModel):
         related_name='Child_category'
     )
     published=models.BooleanField("Otobrazhat?", default=0)
-    template = models.CharField("Shablon", max_length=100, default='blog/post_list')
+    template = models.CharField(max_length=300, default="blog/sport_list")
     paginated=models.PositiveIntegerField("Kolvo posts on page",default=0)
     sort=models.PositiveIntegerField('Sort', default=0)
     def __str__(self):
@@ -80,6 +80,9 @@ class Post(models.Model):
     viewed=models.PositiveIntegerField("Was viewed?", default=0)
     status=models.BooleanField("Registered only", default=False)
     sort=models.PositiveIntegerField("To sort", default=0)
+    """второй способ подсчёта комментариев, вместо метода в post_details"""
+    def get_comments_count(self):
+        return self.comment_set.count()
     def get_absolute_url(self): #функция выстраивания url
         return reverse('detail_post', kwargs={'category':self.category.slug, 'slug':self.slug})
     def __str__(self):
@@ -96,7 +99,12 @@ class Comment(models.Model):
     text=models.TextField(max_length=50)
     created_date=models.DateTimeField(auto_now_add=True)
     moderation=models.BooleanField()
-    post = models.ForeignKey(Post, verbose_name='Statii', on_delete=models.CASCADE)
+    post = models.ForeignKey(
+        Post,
+        verbose_name='Statii',
+        on_delete=models.CASCADE,
+        #related_name="comments"
+    )
     class Meta:
         verbose_name="Commet"
 

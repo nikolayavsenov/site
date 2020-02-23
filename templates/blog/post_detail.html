@@ -17,9 +17,35 @@
     {% endfor %}
     <hr>
     <h2>post list below:</h2>
-        <h3>{{ post.title }}</h3>
-        <h4>{{ post.mini_text }}</h4>
-        <h5>{{ post.published_date }}</h5>
+    <ul>
+    <li>{{ post.title }}</li>
+    <li>{{ post.mini_text }}</li>
+    <li>{{ post.published_date }}</li>
+    </ul>
+    <p></p>
+    <h4>Теги:</h4>{% for tag in post.tags.all %}
+                    {{ tag.name }}
+                  {% endfor %}
+    <br>
+    <small> Автор: {{ post.author }} , опубликовано: {{ post.published_date }}</small>
+    <small>Всего просмотрено: {{ post.viewed }}</small><br>
+    <!---второй способ подсчёта комментариев-->
+    <!--<small> Всего комментариев: {{ post.get_comments_count }}</small>-->
+    <small> Всего комментариев: {{ post.comment_set.count }}</small>
+    <h4>Комментарии:</h4>
+    <!-- 2 способ. передача параметра во views через модель comments-->
+    {# {% for comment in somments %} #}
+    {# Пользователь: {{ comment.user }} #}
+    {# {{ comment.text }} <br> #}
+    {# Добавлен: {{ comment.creared_date }}<br><br> #}
+    {# {% endfor %} #}
+    <!---1 способ.обращаемся через модель comment связаный с post и выводим комменты-->
+    {% for comment in post.comment_set.all %}
+        Пользователь: {{ comment.user }}<br>
+        <p>Коммент</p>{{ comment.text }}
+        <p>Добавлен</p> {{ comment.created_date }}
+    {% endfor %}
+
 </body>
 </html>
 </body>
