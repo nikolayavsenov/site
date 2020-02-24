@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
-    'mptt'
+    'mptt',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -114,7 +115,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -124,3 +125,25 @@ STATIC_URL = '/static/'
 #пути для медиа-файлов
 MEDIA_URL='/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAdminUser',
+        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        #'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_METADATA_CLASS': 'rest_framework.metadata.SimpleMetadata',
+    # 'DEFAULT_PAGINATION_CLASS':
+    #     'rest_framework_json_api.pagination.PageNumberPagination',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 100,
+    'UPLOADED_FILES_USE_URL': True
+}

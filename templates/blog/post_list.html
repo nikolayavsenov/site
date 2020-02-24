@@ -6,14 +6,22 @@
 </head>
 <body>
     {% for category in categories %}
-        <p><a href="{% url 'category' category.slug%}">{{ post.title }}</a></p>
+        <p><a href="/{{category.slug}}/">{{category.name }}</a></p>
     {% endfor %}
     <hr>
     <h2>post list below:</h2>
-    {% for post in posts %}
-        <h3><a href="{{ post.get_absolute_url }}"> {{ post.title }}</a></h3>
-        <h4>{{ post.mini_text }}</h4>
-        <h5>{{ post.published_date }}</h5>
-    {% endfor %}
+    <hr>
+    {% if post_list %} <!--если статьи есть - выполняем цикл ниже-->
+        {% for post in post_list %} <!-- post_list используем для вывода разной инфы-->
+            <h3><a href="{{ post.get_absolute_url }}"> {{ post.title }}</a></h3>
+            <h4>{{ post.mini_text }}</h4>
+            <h5>{{ post.published_date }}</h5>
+            <small> Всего просмотров: {{ post.viewed }}</small>
+            <small> Комментариев {{ post.get_comments_count }}</small>
+        {% endfor %}
+    {% else %} <!--иначе пишем что статей нет-->
+        <h2>No posts here!</h2>
+    {% endif %}
+
 </body>
 </html>

@@ -23,6 +23,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("app.urls")),
+    path('api/v1/', include('api.urls'))
 ]
 """выстраиваем корректный путь для папки с медиа"""
 if settings.DEBUG:

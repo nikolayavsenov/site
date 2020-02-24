@@ -23,9 +23,11 @@ class Cat(MPTTModel):
         related_name='Child_category'
     )
     published=models.BooleanField("Otobrazhat?", default=0)
-    template = models.CharField(max_length=300, default="blog/sport_list")
+    template = models.CharField(max_length=300, default="blog/sport_list.html")
     paginated=models.PositiveIntegerField("Kolvo posts on page",default=0)
     sort=models.PositiveIntegerField('Sort', default=0)
+    def get_absolute_url(self):
+        return reverse('category', kwargs={'category_slug':self.slug})
     def __str__(self):
         return self.name #корректный вывод имени категории
     class Meta:
@@ -35,6 +37,7 @@ class Tag(models.Model):
     name = models.CharField('Tag', max_length=100)
     slug = models.SlugField('Tagslug', max_length=100, unique=True)
     published = models.BooleanField("Otobrazhat?", default=True)
+    #???wtf???template=models.CharField(max_length=300, default="blog/")
 
     def __str__(self):
         return  self.name
@@ -85,6 +88,8 @@ class Post(models.Model):
         return self.comment_set.count()
     def get_absolute_url(self): #функция выстраивания url
         return reverse('detail_post', kwargs={'category':self.category.slug, 'slug':self.slug})
+    def get_category_template(self): #получаем шаблон в CatView
+        return self.category.template
     def __str__(self):
         return self.title
     class Meta:
