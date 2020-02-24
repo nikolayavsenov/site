@@ -26,6 +26,11 @@ class Cat(MPTTModel):
     template = models.CharField(max_length=300, default="blog/sport_list.html")
     paginated=models.PositiveIntegerField("Kolvo posts on page",default=0)
     sort=models.PositiveIntegerField('Sort', default=0)
+    """def get_par_cat(self):
+        par_get=self.objects.get_family.all()
+        print(par_get)
+        return (str(par_get))"""
+
     def get_absolute_url(self):
         return reverse('category', kwargs={'category_slug':self.slug})
     def __str__(self):

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from app.models import *
+from rest_framework_recursive.fields import RecursiveField
 
 class TagSerializer(serializers.ModelSerializer):
     """Поля тегов"""
@@ -11,21 +12,29 @@ class TagSerializer(serializers.ModelSerializer):
             'published'
         )
 
+
+"""class RecursiveSerializer(serializers.Serializer):
+    def to_representation(self, value):
+        serializer=self.parent.parent.__class__(value, context=self.context)
+        return serializer.data"""
+
 class CatSerializer(serializers.ModelSerializer):
     """Поля категорий"""
-    #parent = serializers.Field(source='parent')  # завязка модели саму на себя
+    #parentCat = serializers.CharField(Cat.get_par_cat)
+    #subcat=serializers.SubCatSerializer()
     class Meta:
         model = Cat
         fields = (
+            'id',
             'name',
             'description',
             'published',
-            'parent'
+            #'parentCat'
         )
 
 class PostSerializer(serializers.ModelSerializer):
     """поля постов"""
-    #category=CatSerializer(many=True)
+    category=CatSerializer(many=False, read_only=True)
     tags=TagSerializer(many=True)
     class Meta:
         model=Post
@@ -42,7 +51,7 @@ class PostSerializer(serializers.ModelSerializer):
             'category',
             'published',
             'viewed',
-            'status'
+            'status',
         )
 
 class CommentSerializer(serializers.ModelSerializer):

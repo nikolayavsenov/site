@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02aa6e33-cc6e-4414-b2ac-61e1aef09eea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/somesite/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/somesite/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/somesite/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/somesite/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/somesite/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/somesite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/somesite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +60,11 @@
         <option name="argument" value="--tags" />
         <option name="title" value="All" />
       </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -166,7 +160,8 @@
       <workItem from="1582425647213" duration="1823000" />
       <workItem from="1582434400615" duration="205000" />
       <workItem from="1582489384008" duration="21623000" />
-      <workItem from="1582513166796" duration="1444000" />
+      <workItem from="1582513166796" duration="2284000" />
+      <workItem from="1582544330797" duration="17827000" />
     </task>
     <task id="LOCAL-00001" summary="5 les">
       <created>1582489890809</created>
@@ -175,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582489890809</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="5 les">
+      <created>1582515440943</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582515440943</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
