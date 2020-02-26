@@ -32,6 +32,17 @@ class CatSerializer(serializers.ModelSerializer):
             #'parentCat'
         )
 
+
+class PostShortSerializer(serializers.ModelSerializer):
+    category = CatSerializer(many=False, read_only=True)
+    class Meta:
+        model=Post
+        fields = (
+            'title',
+            'category',
+            'text',
+        )
+
 class PostSerializer(serializers.ModelSerializer):
     """поля постов"""
     category=CatSerializer(many=False, read_only=True)
@@ -67,3 +78,35 @@ class CommentSerializer(serializers.ModelSerializer):
             'post'
         )
 
+
+class PostidSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Post
+        fields=('id',)
+
+
+class CreatePostSerializer(serializers.ModelSerializer):
+    """Создание поста"""
+    category=Cat.objects.name
+    #id=Post.objects.get('id')
+    class Meta:
+        model=Post
+        fields=(
+            #'id',
+            'author',
+            'title',
+            'text',
+            'slug',
+            'subtitle',
+            'category',
+            'created_date',
+            'image',
+            'edit_date',
+            'published_date',
+            'published',
+            'viewed',
+            'status',
+        )
+    def create(self, request):
+        creation = Post.objects.create(**request)
+        return  creation

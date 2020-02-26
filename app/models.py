@@ -1,5 +1,3 @@
-# Create your models here.
-from django.db import models
 from django.contrib.auth.models import *
 from django.db import models
 from django.urls import reverse
@@ -23,9 +21,9 @@ class Cat(MPTTModel):
         related_name='Child_category'
     )
     published=models.BooleanField("Otobrazhat?", default=0)
-    template = models.CharField(max_length=300, default="blog/sport_list.html")
+    template = models.CharField(max_length=300, default="blog/post_list.html")
     paginated=models.PositiveIntegerField("Kolvo posts on page",default=0)
-    sort=models.PositiveIntegerField('Sort', default=0)
+    sort=models.PositiveIntegerField('Sort priority', default=0)
     """def get_par_cat(self):
         par_get=self.objects.get_family.all()
         print(par_get)
@@ -37,6 +35,8 @@ class Cat(MPTTModel):
         return self.name #корректный вывод имени категории
     class Meta:
         verbose_name="Cat"
+    #class MPTTMeta:
+     #   order_insertion_by=('sort',)
 
 class Tag(models.Model):
     name = models.CharField('Tag', max_length=100)
@@ -87,7 +87,7 @@ class Post(models.Model):
     published = models.BooleanField("To Publish?", default=True)
     viewed=models.PositiveIntegerField("Was viewed?", default=0)
     status=models.BooleanField("Registered only", default=False)
-    sort=models.PositiveIntegerField("To sort", default=0)
+    sort=models.PositiveIntegerField("To sort priority", default=0)
     """второй способ подсчёта комментариев, вместо метода в post_details"""
     def get_comments_count(self):
         return self.comment_set.count()
@@ -98,7 +98,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     class Meta:
-        verbose_name="POST"
+        verbose_name="POST",
+        ordering=['sort', '-published_date']
 
 class Comment(models.Model):
     author = models.ForeignKey( #обязательно авторизовать для комментария
@@ -108,7 +109,7 @@ class Comment(models.Model):
     )
     text=models.TextField(max_length=50)
     created_date=models.DateTimeField(auto_now_add=True)
-    moderation=models.BooleanField()
+    moderation=models.BooleanField(default=True)
     post = models.ForeignKey(
         Post,
         verbose_name='Statii',

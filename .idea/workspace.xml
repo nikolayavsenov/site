@@ -2,10 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02aa6e33-cc6e-4414-b2ac-61e1aef09eea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Admin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/app_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/account_inactive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/password_reset_key_message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/password_reset_key_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/cannot_delete_primary_email.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_confirmation_sent.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_confirmed.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_deleted.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/logged_in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/logged_out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/password_changed.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/password_set.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/primary_email_set.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/unverified_primary_email.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_change.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_from_key.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_from_key_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_set.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/signup_closed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/snippets/already_logged_in.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/verification_sent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/verified_email_required.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/blog/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/tags/base_tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/somesite/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/somesite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/somesite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/somesite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/somesite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +103,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -74,14 +128,18 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
   <component name="PyDebuggerOptionsProvider">
     <option name="mySaveCallSignatures" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\PycharmProjects\somesite\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\PycharmProjects\somesite\app\templates" />
     </key>
@@ -161,7 +219,9 @@
       <workItem from="1582434400615" duration="205000" />
       <workItem from="1582489384008" duration="21623000" />
       <workItem from="1582513166796" duration="2284000" />
-      <workItem from="1582544330797" duration="17827000" />
+      <workItem from="1582544330797" duration="23822000" />
+      <workItem from="1582629700497" duration="14079000" />
+      <workItem from="1582656721030" duration="22307000" />
     </task>
     <task id="LOCAL-00001" summary="5 les">
       <created>1582489890809</created>
@@ -177,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582515440943</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="5 les">
+      <created>1582565064144</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582565064144</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

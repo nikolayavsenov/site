@@ -4,7 +4,9 @@ from .models import *
 from django.template import loader
 from django.views.generic.base import View
 from django.template.loader import *
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
+from .forms import CommentForm
+
 
 """def home(request):
     if request.method== "POST":
@@ -25,11 +27,24 @@ class PostDetailView(View):
     def get(self, request, **kwargs): #kwargs указали дабы принимать category и строить нормальный url
         category_list = Cat.objects.filter(published=True)  # передаёт параметры для рендера страницы, словарь или список
         post = get_object_or_404(Post, slug=kwargs.get('slug')) # выводим только тот, который нам передала страница в slug
+        form=CommentForm()
         #можно обратиться к названию поля в таблице, post_id
         #comments = Comment.objects.filter(post_id=post)#(post=post)
         return render(request, 'blog/post_detail.html', {
-            'categories': category_list, 'post': post# 'comments': comments
+            'categories': category_list,
+            'post': post,
+            'form': form,
+            # 'comments': comments
         })
+
+    def post(self, request, **kwargs):
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.post = Post.objects.get(slug=kwargs.get('slug'))
+            form.author = request.user
+            form.save()
+        return redirect(request.path) #возвращаем на ту же страницу
 """ Старые классы
 class CatView(View):
     def get(self,request, category_name):
@@ -49,7 +64,7 @@ class PostListView(View):
     def get_queryset(self):#функция проверки актуальности поста
         return Post.objects.filter(published_date__lte=datetime.now(), published=True)
     def get(self, request, category_slug=None, slug=None):
-        category_list = Cat.objects.filter(published=True)  # передаёт параметры для рендера страницы, словарь или список
+       # category_list = Cat.objects.filter(published=True)  # передаёт параметры для рендера страницы, словарь или список
         # на основании полученного параметра ниже будет алгоритм отображения
         if category_slug is not None:
             posts = self.get_queryset().filter(category__slug=category_slug, category__published=True)#обращаемся к Cat и фильтруем нужные категории
@@ -62,5 +77,19 @@ class PostListView(View):
             template=posts.first().get_category_template()
         else:
             template='blog/post_list.html'
-        return render(request, template, {'post_list': posts, 'categories': category_list})
+        return render(request, template, {'post_list': posts,})
+
+    """class CreateCommentView(View):
+        Создание комментария
+        def post(self, request, pk):
+            form = CommentForm(request.POST)
+            if form.is_valid():
+                form=form.save(commit=False)
+                form.post_id=pk
+                form.author=request.user
+                form.save()
+            return HttpResponse(status=201)"""
+
+
+
 

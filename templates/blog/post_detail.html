@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load app_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,9 +13,14 @@
     <title>Title</title>
 </head>
 <body>
-    {% for category in categories %}
-        <p><a href="/{{category.slug}}/">{{category.name }}</a></p>
-    {% endfor %}
+<ul>
+    {% if user.is_authenticated %}
+        <li><a href="/accounts/logout/">Выход</a></li>
+    {% else %}
+        <li><a href="/accounts/login/">Вход</a></li>
+    {% endif %}
+</ul>
+ {% category_list %}
     <hr>
     <h2>post list below:</h2>
     <ul>
@@ -34,7 +40,21 @@
     <!---второй способ подсчёта комментариев-->
     <!--<small> Всего комментариев: {{ post.get_comments_count }}</small>-->
     <small> Всего комментариев: {{ post.comment_set.count }}</small>
+
     <h4>Комментарии:</h4>
+        {% if user.is_authenticated %}
+            <form action="" method="post"> <!--форма отправки коммента-->
+            {% csrf_token %}
+                {{ form.as_p }}
+            <!--<textarea name="text" cols="25" rows="10"></textarea>  'text' - поле из класса-->
+            <!--<input type="hidden" name="post" value="{ post.id }}"> - можно передать в url-->
+            <br>
+            <button type="submit">Отправить</button>
+            </form>
+            {% else %}
+            <br>
+            <small>Authen needed to left a comment!</small>
+        {% endif %}
     <!-- 2 способ. передача параметра во views через модель comments-->
     {# {% for comment in somments %} #}
     {# Пользователь: {{ comment.user }} #}
@@ -43,7 +63,8 @@
     {# {% endfor %} #}
     <!---1 способ.обращаемся через модель comment связаный с post и выводим комменты-->
     {% for comment in post.comment_set.all %}
-        Пользователь: {{ comment.user }}<br>
+        <br>
+        Пользователь: {{ comment.author }}<br>
         <p>Коммент</p>{{ comment.text }}
         <p>Добавлен</p> {{ comment.created_date }}
     {% endfor %}

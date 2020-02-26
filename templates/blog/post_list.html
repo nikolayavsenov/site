@@ -1,14 +1,24 @@
 <!DOCTYPE html>
+{% load app_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    {% for category in categories %}
-        <p><a href="/{{category.slug}}/">{{category.name }}</a></p>
-    {% endfor %}
-    <hr>
+<ul>
+    {% if user.is_authenticated %}
+        <li><a href="/accounts/logout/">Выход</a></li>
+    {% else %}
+        <li><a href="/accounts/login/">Вход</a></li>
+    {% endif %}
+</ul>
+    {#{% for_category_list as categories %}#}
+    <!--{ for_category_list """count=3 order='id'""" as categories %}-->
+        {#{% for category in categories %}#}
+       <!--<p><a href="{# {{category.get_absolute_url}}">{{category.name }}</a></p>#}-->
+        {# {% endfor %} #}
+    {% category_list %}
     <h2>post list below:</h2>
     <hr>
     {% if post_list %} <!--если статьи есть - выполняем цикл ниже-->
