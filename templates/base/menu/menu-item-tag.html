@@ -1,0 +1,19 @@
+{% load mptt_tags %}
+<ul>
+    {% recursetree items %} <!--items - пункты меню-->
+        <li>
+            {% if node.url %} <!-- если есть url - строим ссылку -->
+                <a class="" href="{{ node.url }}">{{ node.title }}</a>
+            {% elif node.anchor %} <!-- если есть якорь - строим ссылку -->
+                <a class="" href="{{ node.get_anchor }}">{{ node.title }}</a>
+            {% else %} <!-- и не url и не якорь -->
+                <a class="" href="{{ node.content_object.get_absolute_url }}">{{ node.title }}</a>
+            {% endif %}
+            {% if not node.is_leaf_node %}
+                <ul class="children">
+                    {{ children }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul>

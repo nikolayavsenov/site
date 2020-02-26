@@ -81,7 +81,7 @@ class Post(models.Model):
         Cat, #первичная модель, для привязки один к одному
         verbose_name='Categors',
         on_delete=models.CASCADE, # что делать при удалении категории
-        null=True
+        #fnull=True
     )
     template = models.CharField("Shablon", max_length=100, default='blog/post_detail.html') #выбор шаблона для списка категорий
     published = models.BooleanField("To Publish?", default=True)

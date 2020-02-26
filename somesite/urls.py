@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include("app.urls")),
+    path('page/', include("pages.urls")),
     path('api/v1/', include('api.urls')),
 ]
 """выстраиваем корректный путь для папки с медиа"""

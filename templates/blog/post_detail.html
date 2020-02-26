@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load app_tags %}
+{% load app_tags menu_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,15 +20,22 @@
         <li><a href="/accounts/login/">Вход</a></li>
     {% endif %}
 </ul>
+{% menu_item menu='Main' %} <!--добавляем меню-->
+<hr>
  {% category_list %}
     <hr>
     <h2>post list below:</h2>
     <ul>
+
     <li>{{ post.title }}</li>
     <li>{{ post.mini_text }}</li>
     <li>{{ post.published_date }}</li>
+        <li>{{ post.text }}</li>
+        {% if post.image.url is not Null %}
+        <li><img src="{{ post.image.url }}" align="left" width="400" height="300"></li>
+        {% endif %}
     </ul>
-    <p></p>
+    <br>
     <h4>Теги:</h4>{% for tag in post.tags.all %}
                     {% if tag.published %} <!--проверяем опубликован ли тег-->
                    <a href="{% url 'tag' tag.slug %}"> {{ tag.name }}</a>

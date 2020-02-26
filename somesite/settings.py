@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'django.contrib.sites',
     #'allauth.socialaccount',
+    'menu',
+    'pages',
 ]
 
 SITE_ID = 1
@@ -61,7 +63,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
+    'pages.middleware.PageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'somesite.urls'
@@ -91,8 +94,12 @@ WSGI_APPLICATION = 'somesite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'somesite',
+        'USER': 'postgres',
+        'PASSWORD': '342089',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

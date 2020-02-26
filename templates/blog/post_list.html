@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load app_tags %}
+{% load app_tags menu_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,8 @@
         <li><a href="/accounts/login/">Вход</a></li>
     {% endif %}
 </ul>
+{% menu_item menu='Main' %} <!--добавляем меню-->
+<hr>
     {#{% for_category_list as categories %}#}
     <!--{ for_category_list """count=3 order='id'""" as categories %}-->
         {#{% for category in categories %}#}

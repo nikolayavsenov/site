@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .models import *
 from django.template import loader
 from django.views.generic.base import View
@@ -76,7 +76,8 @@ class PostListView(View):
         if posts.exists(): #если посты в категории есть, то ренлерим стандартный шаблон,иначе выводим общий список постов
             template=posts.first().get_category_template()
         else:
-            template='blog/post_list.html'
+            #template='blog/post_list.html'
+            raise Http404() #Кидаем 404, если не нашли статьи/категории
         return render(request, template, {'post_list': posts,})
 
     """class CreateCommentView(View):

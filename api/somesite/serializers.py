@@ -82,19 +82,21 @@ class CommentSerializer(serializers.ModelSerializer):
 class PostidSerializer(serializers.ModelSerializer):
     class Meta:
         model=Post
-        fields=('id',)
+        fields=('published_date',)
 
 
 class CreatePostSerializer(serializers.ModelSerializer):
     """Создание поста"""
     category=Cat.objects.name
     #id=Post.objects.get('id')
+    #published_date = PostidSerializer
     class Meta:
         model=Post
         fields=(
             #'id',
             'author',
             'title',
+            'mini_text',
             'text',
             'slug',
             'subtitle',
