@@ -2,46 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02aa6e33-cc6e-4414-b2ac-61e1aef09eea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/Bengalskie-koshki-obzor-po-pitomnikam3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/bengal_cat_cat_couple_leopard_color_96027_1600x1200.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/s600.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu/templatetags/menu_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/management/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/management/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/management/commands/addpage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/middleware.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sitemap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base/menu/menu-item-tag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/somesite/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20200220_1846.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/somesite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/somesite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/somesite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/somesite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +195,8 @@
       <workItem from="1582629700497" duration="14079000" />
       <workItem from="1582656721030" duration="22426000" />
       <workItem from="1582712605937" duration="7777000" />
-      <workItem from="1582744599951" duration="10760000" />
+      <workItem from="1582744599951" duration="10945000" />
+      <workItem from="1582790699686" duration="12923000" />
     </task>
     <task id="LOCAL-00001" summary="5 les">
       <created>1582489890809</created>
@@ -259,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582681047100</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="8 les">
+      <created>1582756460649</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582756460649</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +254,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="5 les" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 les" />
+    <MESSAGE value="8 les" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 les" />
   </component>
 </project>

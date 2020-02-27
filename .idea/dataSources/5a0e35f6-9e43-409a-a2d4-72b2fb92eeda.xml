@@ -68,12 +68,10 @@
     <index id="36" parent="6" name="sqlite_autoindex_account_emailaddress_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="37" parent="6" name="account_emailaddress_user_id_2c513194">
       <ColNames>user_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="38" parent="6">
       <ColNames>id</ColNames>
@@ -118,12 +116,10 @@
     <index id="46" parent="7" name="sqlite_autoindex_account_emailconfirmation_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="47" parent="7" name="account_emailconfirmation_email_address_id_5b7f8c58">
       <ColNames>email_address_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="48" parent="7">
       <ColNames>id</ColNames>
@@ -207,15 +203,12 @@
     </column>
     <index id="64" parent="8" name="app_cat_slug_a5adc725">
       <ColNames>slug</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="65" parent="8" name="app_cat_tree_id_6d3d6180">
       <ColNames>tree_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="66" parent="8" name="app_cat_parent_id_bef1119d">
       <ColNames>parent_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="67" parent="8">
       <ColNames>id</ColNames>
@@ -279,11 +272,9 @@
     </column>
     <index id="81" parent="9" name="app_comment_author_id_2268155b">
       <ColNames>author_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="82" parent="9" name="app_comment_post_id_9ffeaa47">
       <ColNames>post_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="83" parent="9">
       <ColNames>id</ColNames>
@@ -386,16 +377,13 @@
     <index id="103" parent="10" name="sqlite_autoindex_app_post_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>slug</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="104" parent="10" name="app_post_author_id_87e1d289">
       <ColNames>author_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="105" parent="10" name="app_post_category_id_b20d7758">
       <ColNames>category_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="106" parent="10">
       <ColNames>id</ColNames>
@@ -444,16 +432,13 @@
     <index id="115" parent="11" name="app_post_tags_post_id_tag_id_8b172ad2_uniq">
       <ColNames>post_id
 tag_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="116" parent="11" name="app_post_tags_post_id_99efbe0e">
       <ColNames>post_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="117" parent="11" name="app_post_tags_tag_id_ef7fd308">
       <ColNames>tag_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="118" parent="11">
       <ColNames>id</ColNames>
@@ -497,7 +482,6 @@ tag_id</ColNames>
     <index id="125" parent="12" name="sqlite_autoindex_app_tag_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>slug</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="126" parent="12">
@@ -522,7 +506,6 @@ tag_id</ColNames>
     <index id="130" parent="13" name="sqlite_autoindex_auth_group_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="131" parent="13">
@@ -552,16 +535,13 @@ tag_id</ColNames>
     <index id="136" parent="14" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
       <ColNames>group_id
 permission_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="137" parent="14" name="auth_group_permissions_group_id_b120cbf9">
       <ColNames>group_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="138" parent="14" name="auth_group_permissions_permission_id_84c5c92e">
       <ColNames>permission_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="139" parent="14">
       <ColNames>id</ColNames>
@@ -605,12 +585,10 @@ permission_id</ColNames>
     <index id="146" parent="15" name="auth_permission_content_type_id_codename_01ab375a_uniq">
       <ColNames>content_type_id
 codename</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="147" parent="15" name="auth_permission_content_type_id_2f476e4b">
       <ColNames>content_type_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="148" parent="15">
       <ColNames>id</ColNames>
@@ -681,7 +659,6 @@ codename</ColNames>
     <index id="161" parent="16" name="sqlite_autoindex_auth_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="162" parent="16">
@@ -711,16 +688,13 @@ codename</ColNames>
     <index id="167" parent="17" name="auth_user_groups_user_id_group_id_94350c0c_uniq">
       <ColNames>user_id
 group_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="168" parent="17" name="auth_user_groups_user_id_6a12ed8b">
       <ColNames>user_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="169" parent="17" name="auth_user_groups_group_id_97559544">
       <ColNames>group_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="170" parent="17">
       <ColNames>id</ColNames>
@@ -759,16 +733,13 @@ group_id</ColNames>
     <index id="176" parent="18" name="auth_user_user_permissions_user_id_permission_id_14a6b632_uniq">
       <ColNames>user_id
 permission_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="177" parent="18" name="auth_user_user_permissions_user_id_a95ead1b">
       <ColNames>user_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="178" parent="18" name="auth_user_user_permissions_permission_id_1fbb5f2c">
       <ColNames>permission_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="179" parent="18">
       <ColNames>id</ColNames>
@@ -806,13 +777,11 @@ permission_id</ColNames>
     <index id="185" parent="19" name="sqlite_autoindex_authtoken_token_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="186" parent="19" name="sqlite_autoindex_authtoken_token_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="187" parent="19">
@@ -872,11 +841,9 @@ permission_id</ColNames>
     </column>
     <index id="198" parent="20" name="django_admin_log_content_type_id_c4bce8eb">
       <ColNames>content_type_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="199" parent="20" name="django_admin_log_user_id_c564eba6">
       <ColNames>user_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="200" parent="20">
       <ColNames>id</ColNames>
@@ -918,7 +885,6 @@ permission_id</ColNames>
     <index id="207" parent="21" name="django_content_type_app_label_model_76bd3d3b_uniq">
       <ColNames>app_label
 model</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="208" parent="21">
@@ -968,12 +934,10 @@ model</ColNames>
     <index id="217" parent="23" name="sqlite_autoindex_django_session_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>session_key</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="218" parent="23" name="django_session_expire_date_a5c62663">
       <ColNames>expire_date</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="219" parent="23">
       <ColNames>session_key</ColNames>
@@ -999,7 +963,6 @@ model</ColNames>
     <index id="223" parent="24" name="sqlite_autoindex_django_site_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>domain</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="224" parent="24">
@@ -1049,12 +1012,10 @@ model</ColNames>
     <index id="233" parent="25" name="socialaccount_socialaccount_provider_uid_fc810c6e_uniq">
       <ColNames>provider
 uid</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="234" parent="25" name="socialaccount_socialaccount_user_id_8146e70c">
       <ColNames>user_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="235" parent="25">
       <ColNames>id</ColNames>
@@ -1121,16 +1082,13 @@ uid</ColNames>
     <index id="247" parent="27" name="socialaccount_socialapp_sites_socialapp_id_site_id_71a9a768_uniq">
       <ColNames>socialapp_id
 site_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="248" parent="27" name="socialaccount_socialapp_sites_socialapp_id_97fb6e7d">
       <ColNames>socialapp_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="249" parent="27" name="socialaccount_socialapp_sites_site_id_2579dee5">
       <ColNames>site_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="250" parent="27">
       <ColNames>id</ColNames>
@@ -1183,16 +1141,13 @@ site_id</ColNames>
     <index id="259" parent="28" name="socialaccount_socialtoken_app_id_account_id_fca4e0ac_uniq">
       <ColNames>app_id
 account_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="260" parent="28" name="socialaccount_socialtoken_account_id_951f210e">
       <ColNames>account_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <index id="261" parent="28" name="socialaccount_socialtoken_app_id_636a42d7">
       <ColNames>app_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="262" parent="28">
       <ColNames>id</ColNames>

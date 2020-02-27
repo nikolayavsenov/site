@@ -1,5 +1,7 @@
+from django.http import HttpResponse
 from rest_framework import serializers
 from app.models import *
+from django.contrib.auth.models import *
 from rest_framework_recursive.fields import RecursiveField
 
 class TagSerializer(serializers.ModelSerializer):
@@ -45,11 +47,14 @@ class PostShortSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     """поля постов"""
+    pk = serializers.IntegerField(read_only=True)
+    pk=id
     category=CatSerializer(many=False, read_only=True)
     tags=TagSerializer(many=True)
     class Meta:
         model=Post
         fields=(
+            'id',
             'author',
             'title',
             'text',
@@ -88,12 +93,13 @@ class PostidSerializer(serializers.ModelSerializer):
 class CreatePostSerializer(serializers.ModelSerializer):
     """Создание поста"""
     category=Cat.objects.name
-    #id=Post.objects.get('id')
+    pk=serializers.IntegerField(read_only=True)
+    pk=id
     #published_date = PostidSerializer
     class Meta:
         model=Post
         fields=(
-            #'id',
+            'id',
             'author',
             'title',
             'mini_text',
@@ -112,3 +118,10 @@ class CreatePostSerializer(serializers.ModelSerializer):
     def create(self, request):
         creation = Post.objects.create(**request)
         return  creation
+
+class DeletePostSerializer(serializers.ModelSerializer):
+    pk=serializers.IntegerField
+    pk=id
+    class Meta:
+        model = Post
+        fields=('id')
