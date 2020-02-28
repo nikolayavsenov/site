@@ -5,7 +5,7 @@ from mptt.admin import MPTTModelAdmin
 from .models import Menu, MenuItem
 #from .forms import MenuItemAdminForm
 
-
+#Кастомизация админки
 @admin.register(Menu)
 class MenuAdmin(admin.ModelAdmin):
     """Меню"""
@@ -15,12 +15,12 @@ class MenuAdmin(admin.ModelAdmin):
 
 
 @admin.register(MenuItem)
-class MenuItemAdmin(MPTTModelAdmin):
+class MenuItemAdmin(MPTTModelAdmin): #для вложенности меню
     """Пункты меню"""
     #form = MenuItemAdminForm
     list_display = ("title", "name", "parent", "menu", "sort", "id", "published")
     list_filter = ("menu", "parent", "published")
-    search_fields = ("name", "parent", "menu")
+    search_fields = ("name", "parent__name", "menu__name")
     save_as = True
     list_editable = ("sort", )
     mptt_level_indent = 20

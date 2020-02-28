@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+from . import mailset
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -195,15 +195,20 @@ CORS_ALLOW_HEADERS = [
 ]
 
 # Allauth
-#ACCOUNT_EMAIL_REQUIRED = False
-#ACCOUNT_EMAIL_UNIQUE = False
-# ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_UNIQUE = True
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = "username"
-#ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
-#ACCOUNT_EMAIL_VERIFICATION = "optional"
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_EMAIL_VERIFICATION = "optional" #требуется ли подтверждение почты для входа
 ACCOUNT_USERNAME_BLACKLIST = ["admin", "administrator", "moderator"]
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/'
-# ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 150
+ACCOUNT_SESSION_REMEMBER = None
+
+
 REST_SESSION_LOGIN = 'False'

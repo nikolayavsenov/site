@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02aa6e33-cc6e-4414-b2ac-61e1aef09eea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a0e35f6-9e43-409a-a2d4-72b2fb92eeda.xml" afterDir="false" />
+    <list default="true" id="02aa6e33-cc6e-4414-b2ac-61e1aef09eea" name="Default Changelist" comment="8 les">
+      <change afterPath="$PROJECT_DIR$/media/post/131932-lednik-gornyj_relef-severnyj_ledovityj_okean-lofoten-gora-3840x2160.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/Bengalskie-koshki-obzor-po-pitomnikam3_Y61gc9a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/World___Canada_Lake_in_Banff_National_Park__Alberta__Canada_065436_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/somesite/mailset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/somesite/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/somesite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/somesite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/somesite/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/somesite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/somesite/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,8 +79,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -196,7 +200,9 @@
       <workItem from="1582656721030" duration="22426000" />
       <workItem from="1582712605937" duration="7777000" />
       <workItem from="1582744599951" duration="10945000" />
-      <workItem from="1582790699686" duration="12923000" />
+      <workItem from="1582790699686" duration="13634000" />
+      <workItem from="1582830105860" duration="1234000" />
+      <workItem from="1582842098944" duration="6408000" />
     </task>
     <task id="LOCAL-00001" summary="5 les">
       <created>1582489890809</created>
@@ -233,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582756460649</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="8 les">
+      <created>1582822051475</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582822051475</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

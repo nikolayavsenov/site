@@ -95,6 +95,7 @@ class CreatePostSerializer(serializers.ModelSerializer):
     category=Cat.objects.name
     pk=serializers.IntegerField(read_only=True)
     pk=id
+    created_date=models.DateTimeField(auto_now=True)
     #published_date = PostidSerializer
     class Meta:
         model=Post
@@ -102,7 +103,7 @@ class CreatePostSerializer(serializers.ModelSerializer):
             'id',
             'author',
             'title',
-            'mini_text',
+            #'mini_text',
             'text',
             'slug',
             'subtitle',

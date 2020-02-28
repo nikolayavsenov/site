@@ -25,8 +25,8 @@ def get_page(request, url):
 
 @csrf_protect
 def render_page(request, page):
-    """Рендер страницы"""
+    """Рендер страницы""" #Проверка типы страницы (для зарегистрированных) и типа пользователя
     if page.registration_required and not request.user.is_authenticated:
-        from django.contrib.auth.views import redirect_to_login
+        from django.contrib.auth.views import redirect_to_login #кидаем на страницу логина неавторизованного
         return redirect_to_login(request.path)
-    return render(request, page.template, {"page": page})
+    return render(request, page.template, {"page": page}) #возвращаем на исходную после авторизации
